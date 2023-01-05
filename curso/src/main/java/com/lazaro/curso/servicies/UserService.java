@@ -3,8 +3,11 @@ package com.lazaro.curso.servicies;
 import java.util.List;
 import java.util.Optional;
 
+<<<<<<< HEAD
 import javax.persistence.EntityNotFoundException;
 
+=======
+>>>>>>> 071aa4fe14c0b2849975f85834652789fb9add0a
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
