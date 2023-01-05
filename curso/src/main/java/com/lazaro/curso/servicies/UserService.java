@@ -3,6 +3,8 @@ package com.lazaro.curso.servicies;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,15 @@ public class UserService {
 	
 	public User save(User user) {
 		return userRepository.save(user);
+	}
+	
+	@Transactional
+	public User delete(Long id) {
+		Optional<User> obj = userRepository.findById(id);
+		if(obj.get() != null) {
+			userRepository.delete(obj.get());
+		}
+		return obj.get();
 	}
 
 }
